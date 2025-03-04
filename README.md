@@ -1,13 +1,13 @@
-# c_template_application
-A template for all of my c projects.
+# PIDcontroller
+This is a very simple library, implementation of a iterative digital PID controller. This code could easily be copy pasted and used, this implementation here just provides a modularity reuse of same code.
 
 ## Setup instructions
 
 **Download source code :**
- * `git clone https://github.com/RohanVDvivedi/c_template_application.git`
+ * `git clone https://github.com/RohanVDvivedi/PIDcontroller.git`
 
 **Build from source :**
- * `cd c_template_application`
+ * `cd PIDcontroller`
  * `make clean all`
 
 **Install from the build :**
@@ -15,13 +15,12 @@ A template for all of my c projects.
  * ***Once you have installed from source, you may discard the build by*** `make clean`
 
 ## Using The library
- * add `-lcapp` linker flag, while compiling your application
+ * add `-lpidcontroller` linker flag, while compiling your application
  * do not forget to include appropriate public api headers as and when needed. this includes
-   * `#include<capp.h>`
-   * `#include<print_temp.h>`
+   * `#include<pid.h>`
 
 ## Instructions for uninstalling library
 
 **Uninstall :**
- * `cd c_template_application`
+ * `cd PIDcontroller`
  * `sudo make uninstall`
