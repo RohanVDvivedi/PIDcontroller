@@ -56,7 +56,7 @@ float_number pid_update(pid_state* pid, float_number current_value, float_number
 	}
 
 	// derivative component
-	// notice: previous_error and error are both calculated using the same set_point, this is to avoid derivative componet spikes
+	// notice: previous_error and error are both calculated using the same set_point, this is to avoid derivative component spikes
 	float_number previous_error = set_point - pid->previous_value;
 	float_number derivative  = pid->constants.Kd * (error - previous_error);
 	pid->previous_value = current_value; // update the previous_value with the current_value, i.e. prepare for next iteration
