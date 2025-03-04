@@ -39,6 +39,15 @@ void pid_reinit(pid_state* pid);
 void pid_update_constants(pid_state* pid, float_number Kp, float_number Ki, float_number Kd);
 
 // it is your responsibility to call pid_update at a regular interval in your program
+// here the current_value is the output of the sensor value, while set_point is what we want it to be
+// the return value is what you need to feed to your actuators/devices to bring the current_value (sensor generated) closer and closer to your set_point (what you want your sensor value to be at)
 float_number pid_update(pid_state* pid, float_number current_value, float_number set_point);
+
+/*
+	For a quadcopter drone
+	current_value = gyroscope value from the sensor
+	set_point = input signal from the joystick that dictates what gyroscope value should be
+	the return value here should be fed into the motors on both sides differentially to make the current_value reach set_point in some duration of time
+*/
 
 #endif
