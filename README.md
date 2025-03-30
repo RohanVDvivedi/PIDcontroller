@@ -17,7 +17,7 @@ This is a very simple library, implementation of a iterative digital PID control
 ## Using The library
  * add `-lpidcontroller -lm` linker flag, while compiling your application
  * do not forget to include appropriate public api headers as and when needed. this includes
-   * `#include<pid.h>`
+   * `#include<pidcontroller/pid.h>`
 
 ## Instructions for uninstalling library
 
